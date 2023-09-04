@@ -1,0 +1,7 @@
+---
+k3s_version: v1.27.4+k3s1
+ansible_user: draspa
+systemd_dir: /etc/systemd/system
+control_ip: "{{ hostvars[groups['control'][0]]['ansible_host'] | default(groups['control'][0]) }}"
+extra_server_args: ""
+extra_agent_args: ""
